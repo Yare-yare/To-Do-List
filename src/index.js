@@ -252,6 +252,10 @@ document.body.addEventListener("submit", (event) => {
     taskParentDiv.appendChild(imageAndTaskAdded); //image and task
     taskParentDiv.appendChild(taskCalanderIconParent); //date picker/calander
     containerForMain.appendChild(taskParentDiv);
+
+    taskImage.addEventListener("click", () => {
+      taskParentDiv.remove();
+    });
   }
 
   /*  Date and image logic

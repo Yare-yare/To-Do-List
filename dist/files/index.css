@@ -161,6 +161,6 @@ body{
   align-items: center;
 }
 
-.taskAdd{
+.taskAdded{
   border-color: 1px var(--background-color) ;
 }
