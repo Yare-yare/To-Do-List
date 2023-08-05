@@ -1,0 +1,166 @@
+:root {
+    --background-color: #FFF8DC;
+    --color:#000000;
+  }
+
+  /* changing the font to Caveat by Impalleri Type */
+  @font-face {
+    font-family: caveat;
+    src: url(../files/Caveat-VariableFont_wght.ttf);
+  }
+
+body{
+    background-color: var(--background-color);
+    color: var(--color);
+    margin: 0%;
+    padding: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    min-height: 100vh;
+    overflow: hidden;
+    font-weight: bold;
+    font-family: caveat, 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+
+/* making the header and footer have colors */
+.header, .footer {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+/*making the grid-container display:grid*/
+.gridContainer{
+    display: grid;
+    grid-template-columns: 200px 1fr; /* Sidebar, Main Content */
+    gap:20px;
+}
+
+.sideBar {
+    display: flex;
+    align-content: center;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 10px;
+    flex-direction: column;
+    gap: 30px;
+    height: 80%;
+  }
+
+  .contentSection {
+    background-color: #C5C5A3;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .footer{
+    position: absolute;
+    bottom: 0%;
+    width: 100%;
+  }
+
+  .footer span {
+    margin-right: 10px;
+  }
+
+  /* working on the asideContent */
+  .container{
+    font-family: caveat;
+    background-color: #C5C5A3;
+    border-radius: 1rem;
+    padding: 1rem;
+  }
+
+  button{
+    font-family: caveat;
+    font-size: x-large;
+    padding: 5px;
+    border-radius: .5rem;
+    box-shadow: #333  2px 3px 1px;
+  }
+
+  button:hover{
+    background-color: var(--background-color);
+    animation: bounceAnimation 2s infinite;
+  }
+
+  @keyframes bounceAnimation {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-5px); } /* Adjust the -20px value to control the bounce height */
+  }
+
+  /* editing the images of aside  */
+  .image{
+   width: 35px;
+  }
+
+  img{
+    width:50px;
+  }
+
+  .inbox {
+    background-color: #A3D9C5;
+    box-shadow: #FFC5E3 2px 3px 20px 3px; 
+  }
+
+  .projects {
+    background-color: #A3C5D9;
+    box-shadow: #FFC5E3 2px 3px 20px 3px;
+}
+
+  /* working on the Content section */
+  .containerForMain{
+    background-color: var(--background-color);
+    padding: 1rem;
+    border-radius: 0.5rem;
+  }
+
+  .gitHubLogo{
+    width: 20px;
+  }
+
+  fieldset{
+    background-color:#C5C5A3;
+    border-radius: 0.5rem;
+    box-shadow: rgb(0, 0, 0) 3px 3px 3px;
+  }
+
+/* working on the tasks/projects displayed */
+.projectParentDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-top: 10px;
+  background-color:#C5C5A3;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0, 0, 0) 3px 3px 3px;
+  gap: 10px;
+}
+
+.taskParentDiv{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0.5rem;
+  margin-top: 10px;
+  background-color:#C5C5A3;
+  border-radius: 0.5rem;
+  box-shadow: rgb(0, 0, 0) 3px 3px 3px;
+  gap: 10px;
+}
+
+.imageAndTaskAdded, .imageAndProjectAdded{
+  display: flex;
+  align-items: center;
+}
+
+.taskAdd{
+  border-color: 1px var(--background-color) ;
+}

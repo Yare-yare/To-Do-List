@@ -5,9 +5,10 @@ module.exports = {
   mode: "development", // or "production"
   entry: {
     index: "./src/index.js",
+    seconed: "./src/seconed.js",
   },
   output: {
-    filename: "main.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "dist"),
     clean: false,
   },
@@ -34,12 +35,12 @@ module.exports = {
     ],
   },
   devServer: {
-    contentBase: path.join(__dirname, "src"),
+    contentBase: path.join(__dirname, "dist"), // Set contentBase to the "dist" directory
   },
   devtool: "inline-source-map",
   plugins: [
     new HtmlWebPackPlugin({
-      title: "Devolopment",
+      title: "To-Do-List",
     }),
   ],
 };
